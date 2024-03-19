@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.1pre]
+## [1.0.1]
 
 - Bugfix: added client secret to token params request
 - Updated to full url for context endpoint
