@@ -1,5 +1,5 @@
 # Changelog
 
-## [0.1.0]
+## [1.0.0]
 
-- Testing release gem to rubygems.org
+- New omniauth-miro strategy for Miro OAuth 2.0
