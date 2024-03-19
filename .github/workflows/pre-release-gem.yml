@@ -1,0 +1,9 @@
+name: prerelease-gem
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  prerelease:
+    uses: rewindio/github-action-common/.github/workflows/pre-release-gem.yml@v1
