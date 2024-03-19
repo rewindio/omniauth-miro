@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-miro (1.0.0)
+    omniauth-miro (1.0.1pre)
       omniauth (>= 1, < 3)
       omniauth-oauth2 (~> 1.1)
 
