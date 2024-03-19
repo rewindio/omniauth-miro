@@ -2,6 +2,6 @@
 
 module OmniAuth
   module Miro
-    VERSION = '1.0.0'
+    VERSION = '1.0.1pre'
   end
 end

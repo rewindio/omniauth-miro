@@ -31,11 +31,19 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/v1/oauth-token').parsed
+        @raw_info ||= access_token.get('https://api.miro.com/v1/oauth-token').parsed
       end
 
       def callback_url
         full_host + callback_path
+      end
+
+      def token_params
+        super.tap do |params|
+          params[:client_id] = client.id
+          params[:client_secret] = client.secret
+          params[:redirect_uri] = callback_url
+        end
       end
     end
   end
