@@ -54,6 +54,10 @@ Naming/MethodParameterName:
 Naming/BlockForwarding:
   EnforcedStyle: explicit
 
+Naming/FileName:
+  Exclude:
+    - lib/omniauth-miro.rb
+
 # Minitest cop configuration
 
 # Performance cop configuration
