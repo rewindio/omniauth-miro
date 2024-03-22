@@ -13,7 +13,7 @@ module OmniAuth
         token_url: 'https://api.miro.com/v1/oauth/token'
       }
 
-      uid { raw_info['team']['id'] }
+      uid { raw_info['organization']['id'] }
 
       info do
         {
@@ -26,7 +26,8 @@ module OmniAuth
 
       extra do
         {
-          raw_info: raw_info
+          raw_info: raw_info,
+          token_info: access_token
         }
       end
 
