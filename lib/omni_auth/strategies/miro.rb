@@ -46,6 +46,25 @@ module OmniAuth
           params[:redirect_uri] = callback_url
         end
       end
+
+      def callback_phase # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+        error = request.params["error_reason"] || request.params["error"]
+        if !options.provider_ignores_state && (request.params["state"].to_s.empty? || request.params["state"] != session.delete("omniauth.state"))
+          fail!(:csrf_detected, CallbackError.new(:csrf_detected, "CSRF detected"))
+        elsif error
+          fail!(error, CallbackError.new(request.params["error"], request.params["error_description"] || request.params["error_reason"], request.params["error_uri"]))
+        else
+          self.access_token = build_access_token
+          env['omniauth.auth'] = auth_hash
+          call_app!
+        end
+      rescue ::OAuth2::Error, CallbackError => e
+        fail!(:invalid_credentials, e)
+      rescue ::Timeout::Error, ::Errno::ETIMEDOUT => e
+        fail!(:timeout, e)
+      rescue ::SocketError => e
+        fail!(:failed_to_connect, e)
+      end
     end
   end
 end

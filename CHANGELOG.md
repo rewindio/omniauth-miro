@@ -4,6 +4,7 @@
 
 - Update uid to use organization id id
 - Added token response into omniauth hash
+- Overwrite callback_phase method to not fail upon missing refresh token
 
 ## [1.0.1]
 
