@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3]
+
+- Remove overwritten callback_phase method that skipped refresh_token existence check
+
 ## [1.0.2]
 
 - Update uid to use organization id id
