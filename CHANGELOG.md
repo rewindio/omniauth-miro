@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0]
+
+- Adding user details to omniauth hash
+
 ## [1.0.3]
 
 - Remove overwritten callback_phase method that skipped refresh_token existence check
