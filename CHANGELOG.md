@@ -1,5 +1,11 @@
 # Changelog
 
+
+## [1.0.4]
+
+- Address CVE-2025-27221 by updating uri to 1.0.3
+- Update other dependencies to their respective latest minor versions
+
 ## [1.0.3]
 
 - Remove overwritten callback_phase method that skipped refresh_token existence check
