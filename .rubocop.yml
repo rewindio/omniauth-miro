@@ -81,7 +81,7 @@ RSpec/NestedGroups:
   Max: 5
 RSpec/VerifiedDoubleReference:
   Enabled: false
-RSpec/FilePath:
+RSpec/SpecFilePathSuffix:
   Exclude:
     - spec/omni_auth/miro/version_spec.rb
 RSpec/SpecFilePathFormat:
