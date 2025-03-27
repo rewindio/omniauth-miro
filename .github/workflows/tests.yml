@@ -27,6 +27,7 @@ jobs:
           name: coverage-results
           path: coverage
           retention-days: 5
+          include-hidden-files: true
 
   coverage:
     needs: rspec
