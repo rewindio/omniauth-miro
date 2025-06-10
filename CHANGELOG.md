@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.5]
+
+- Address CVE-2025-49007
+- Update dependencies
+
 ## [1.0.4]
 
 - Address CVE-2025-27221 by updating uri to 1.0.3
