@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.6]
+
+- Update Ruby version to 3.4.5 to address security vulnerabilities
+
 ## [1.0.5]
 
 - Address CVE-2025-49007
